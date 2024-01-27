@@ -33,6 +33,23 @@ tags:
   - name: user
     description: Operations about user
 paths:
+  /pet1:
+    get:
+      tags:
+        - pet
+      summary: Test Add a new pet to the store
+      description:  TestAdd a new pet to the store
+      operationId: TestaddPet
+      responses:
+        '200':
+            description: Successful operation
+            content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Pet'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
   /pet:
     post:
       tags:
